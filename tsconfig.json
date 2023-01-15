@@ -1,21 +1,78 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "types": ["cypress", "@testing-library/cypress"],
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+	"compilerOptions": {
+		"target": "ESNext",
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"incremental": true,
+		"paths": {
+			"@atoms": [
+				"src/components/atoms/index.ts"
+			],
+			"@molecules": [
+				"src/components/molecules/index.ts"
+			],
+			"@organisms": [
+				"src/components/organisms/index.ts"
+			],
+			"@templates": [
+				"src/components/templates/index.ts"
+			],
+			"@layouts": [
+				"src/components/layouts/index.ts"
+			],
+			"@constants": [
+				"src/constants/index.ts"
+			],
+			"@helpers": [
+				"src/helpers/index.ts"
+			],
+			"@hooks": [
+				"src/hooks/index.ts"
+			],
+			"@interfaces": [
+				"src/interfaces/index.ts"
+			],
+			"@store": [
+				"src/store/index.ts"
+			],
+			"@types": [
+				"src/types/index.ts"
+			],
+			"@utils": [
+				"src/utils/index.ts"
+			],
+			"@styles/*": [
+				"styles/*"
+			]
+		},
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"baseUrl": "."
+	},
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts"
+	],
+	"exclude": [
+		"node_modules"
+	]
 }
